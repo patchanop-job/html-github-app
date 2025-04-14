@@ -18,6 +18,7 @@ jobs:
       FULLNAME: "Mary Doe"
     steps:
       - run: echo "${{vars.COMPANY_NAME}}"
+      - run: echo ${{secrets.MYSQL_PASSWORD}}
       - run: echo "My host is $MY_HOST and $FULLNAME"
       - run: echo "Hello ${{github.actor}} $FULLNAME"
 
